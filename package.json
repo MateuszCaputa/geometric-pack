@@ -1,0 +1,17 @@
+{
+  "name": "geometric-pack",
+  "description": "",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MateuszCaputa/geometric-pack.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Mateusz Caputa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MateuszCaputa/geometric-pack/issues"
+  },
+  "homepage": "https://github.com/MateuszCaputa/geometric-pack"
+}
