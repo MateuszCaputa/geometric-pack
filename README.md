@@ -12,7 +12,7 @@ Geometric calculator created with Node.js
 
 ## General info
 
-This project is geometric pack with lots of available calculations on any figures.
+This project is geometric pack with lots of available calculations on any figure
 
 ## Technologies
 
@@ -52,6 +52,10 @@ Available classes:
 
 - Rhombus, You have to use two arguments and
   program will take them as side 'a'
+  and height 'h' in exact order
+
+- Parallelogram, You have to use three arguments
+  and program will take them as side 'a', side 'b'
   and height 'h' in exact order
 
 ## Example of use
