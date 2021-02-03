@@ -58,6 +58,11 @@ Available classes:
   and program will take them as side 'a', side 'b'
   and height 'h' in exact order
 
+- Polygon, It's a regular polygon so you have to
+  use two arguments and program will take them as
+  side 'a' and number of sides 'n' where 3 <= n <= 14
+  in exact order
+
 ## Example of use
 
 You can check example how this program works in src/example.js
