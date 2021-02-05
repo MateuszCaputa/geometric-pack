@@ -3,76 +3,74 @@ import { transformRadiansToDegrees } from "./transform.js";
 export class Polygon {
   constructor(...args) {
     this.validateInput(args);
-    this.a = args[0];
-    this.n = args[1];
+    this.sideLength = args[0];
+    this.vertexCount = args[1];
   }
 
   validateInput(args) {
-    if (this.hasNegative(args)) {
-      throw new Error("arguments must be a positive numbers");
-    }
-    if (this.requirement(args)) {
-      throw new Error("number of sides 'n' must be a value between 3 and 14");
-    }
     if (args.length !== 2) {
-      throw new Error("class Polygon must have 2 arguments");
+      throw new Error("Polygon constructor takes 2 arguments");
+    }
+    if (this.hasNegative(args)) {
+      throw new Error("Side length and vertex count must be positive numbers");
+    }
+    if (this.requirement(args[1])) {
+      throw new Error("Vertex count must be between 3 and 14");
     }
   }
 
-  hasNegative(args) {
-    const [a, n] = args;
-    return a <= 0 || n <= 0;
+  hasNegative([sideLength, vertexCount]) {
+    return sideLength <= 0 || vertexCount <= 0;
   }
 
-  requirement(args) {
-    return args[1] < 3 || args[1] > 14;
+  requirement(vertexCount) {
+    return vertexCount < 3 || vertexCount > 14;
   }
 
-  polygon() {
+  getDefinition() {
     return {
-      a: this.a,
-      numberOfSides: this.n,
-
+      sideLength: this.sideLength,
+      vertexCount: this.vertexCount,
       circumference: this.getCircumference(),
       area: this.getArea(),
       angels: this.getAngles(),
-      radiusOfOuterCircle: this.getOuterCircle(),
-      radiusOfInnerCircle: this.getInnerCircle(),
+      outerCircleRadius: this.getOuterCircleRadius(),
+      innerCircleRadius: this.getInnerCircleRadius(),
     };
   }
 
   getCircumference() {
-    return this.a * this.n;
+    return this.sideLength * this.vertexCount;
   }
 
   getArea() {
     return (
-      (1 / 4) * this.n * Math.pow(this.a, 2) * (1 / Math.tan(Math.PI / this.n))
+      (1 / 4) * this.vertexCount * Math.pow(this.sideLength, 2) * (1 / Math.tan(Math.PI / this.vertexCount))
     );
   }
 
-  getAlpha() {
-    const radians = ((this.n - 2) * Math.PI) / this.n;
+  getInteriorAngle() {
+    const radians = ((this.vertexCount - 2) * Math.PI) / this.vertexCount;
     return transformRadiansToDegrees(radians);
   }
 
-  getBeta() {
-    const radians = (2 * Math.PI) / this.n;
+  getExteriorAngle() {
+    const radians = (2 * Math.PI) / this.vertexCount;
     return transformRadiansToDegrees(radians);
   }
 
   getAngles() {
     return {
-      interiorAngle: this.getAlpha(),
-      exteriorAngle: this.getBeta(),
+      interiorAngle: this.getInteriorAngle(),
+      exteriorAngle: this.getExteriorAngle(),
     };
   }
 
-  getOuterCircle() {
-    return (1 / 2) * this.a * (1 / Math.sin(Math.PI / this.n));
+  getOuterCircleRadius() {
+    return (1 / 2) * this.sideLength * (1 / Math.sin(Math.PI / this.vertexCount));
   }
 
-  getInnerCircle() {
-    return (1 / 2) * this.a * (1 / Math.tan(Math.PI / this.n));
+  getInnerCircleRadius() {
+    return (1 / 2) * this.sideLength * (1 / Math.tan(Math.PI / this.vertexCount));
   }
 }
