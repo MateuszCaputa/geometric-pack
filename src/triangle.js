@@ -1,75 +1,87 @@
 import { transformRadiansToDegrees } from "./transform.js";
 
 export class Triangle {
-  constructor(...sides) {
-    this.validateInput(sides);
-    const sortedSides = sides.sort((a, b) => a - b);
-    this.a = sortedSides[0];
-    this.b = sortedSides[1];
-    this.c = sortedSides[2];
+  constructor(...args) {
+    this.validateInput(args);
+    const sortedSides = args.sort((a, b) => a - b);
+    this.sideLengthA = sortedSides[0];
+    this.sideLengthB = sortedSides[1];
+    this.sideLengthC = sortedSides[2];
   }
 
-  validateInput(sides) {
-    if (this.hasNegative(sides)) {
-      throw new Error("arguments must be a positive numbers");
+  validateInput(args) {
+    if (args.length !== 3) {
+      throw new Error("Triangle constructor takes 3 arguments");
     }
-    if (sides.length !== 3) {
-      throw new Error("class Triangle must have 3 arguments");
+    if (this.hasNegative(args)) {
+      throw new Error("Side lengths must be positive numbers");
     }
-    if (!this.isTriangle(sides)) {
+    if (this.isTriangle(args)) {
       throw new Error("Not a triangle");
     }
   }
 
-  hasNegative(sides) {
-    const [a, b, c] = sides;
-    return a <= 0 || b <= 0 || c <= 0;
+  hasNegative([sideLengthA, sideLengthB, sideLengthC]) {
+    return sideLengthA <= 0 || sideLengthB <= 0 || sideLengthC <= 0;
   }
 
-  triangle() {
-    return {
-      a: this.a,
-      b: this.b,
-      c: this.c,
+  isTriangle([sideLengthA, sideLengthB, sideLengthC]) {
+    return (
+      sideLengthA <= 0 &&
+      sideLengthB <= 0 &&
+      sideLengthC <= 0 &&
+      sideLengthA + sideLengthB <= sideLengthC &&
+      sideLengthA + sideLengthC <= sideLengthB &&
+      sideLengthB + sideLengthC <= sideLengthA
+    );
+  }
 
+  getDefinition() {
+    return {
+      sideLengthA: this.sideLengthA,
+      sideLengthB: this.sideLengthB,
+      sideLengthC: this.sideLengthC,
       circumference: this.getCircumference(),
       area: this.getArea(),
       rightAngle: this.hasRightAngle(),
       heights: this.getHeights(),
       angles: this.getAngles(),
-      radiusOfOuterCircle: this.getOuterCircle(),
-      radiusOfInnerCircle: this.getInnerCircle(),
+      outerCircleRadius: this.getOuterCircleRadius(),
+      innerCircleRadius: this.getInnerCircleRadius(),
     };
   }
 
-  isTriangle(sides) {
-    const [a, b, c] = sides;
-    return a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a;
-  }
-
   getCircumference() {
-    return this.a + this.b + this.c;
+    return this.sideLengthA + this.sideLengthB + this.sideLengthC;
   }
 
   getArea() {
     const s = this.getCircumference() / 2;
-    return Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
+    return Math.sqrt(
+      s *
+        (s - this.sideLengthA) *
+        (s - this.sideLengthB) *
+        (s - this.sideLengthC)
+    );
   }
 
   hasRightAngle() {
-    return Math.pow(this.a, 2) + Math.pow(this.b, 2) === Math.pow(this.c, 2);
+    return (
+      Math.pow(this.sideLengthA, 2) + Math.pow(this.sideLengthB, 2) ===
+      Math.pow(this.sideLengthC, 2)
+    );
   }
 
   getHeightOfBaseA() {
-    return this.getArea() / (0.5 * this.a);
+    return this.getArea() / (0.5 * this.sideLengthA);
   }
 
   getHeightOfBaseB() {
-    return this.getArea() / (0.5 * this.b);
+    return this.getArea() / (0.5 * this.sideLengthB);
   }
 
   getHeightOfBaseC() {
-    return this.getArea() / (0.5 * this.c);
+    return this.getArea() / (0.5 * this.sideLengthC);
   }
 
   getHeights() {
@@ -81,17 +93,23 @@ export class Triangle {
   }
 
   getGamma() {
-    const radians = Math.asin((2 * this.getArea()) / (this.a * this.b));
+    const radians = Math.asin(
+      (2 * this.getArea()) / (this.sideLengthA * this.sideLengthB)
+    );
     return transformRadiansToDegrees(radians);
   }
 
   getBeta() {
-    const radians = Math.asin((2 * this.getArea()) / (this.a * this.c));
+    const radians = Math.asin(
+      (2 * this.getArea()) / (this.sideLengthA * this.sideLengthC)
+    );
     return transformRadiansToDegrees(radians);
   }
 
   getAlpha() {
-    const radians = Math.asin((2 * this.getArea()) / (this.b * this.c));
+    const radians = Math.asin(
+      (2 * this.getArea()) / (this.sideLengthB * this.sideLengthC)
+    );
     return transformRadiansToDegrees(radians);
   }
 
@@ -105,7 +123,9 @@ export class Triangle {
 
   isIdentical(triangle) {
     return (
-      this.a === triangle.a && this.b === triangle.b && this.c === triangle.c
+      this.sideLengthA === triangle.sideLengthA &&
+      this.sideLengthB === triangle.sideLengthB &&
+      this.sideLengthC === triangle.sideLengthC
     );
   }
 
@@ -117,11 +137,14 @@ export class Triangle {
     );
   }
 
-  getOuterCircle() {
-    return (this.a * this.b * this.c) / (4 * this.getArea());
+  getOuterCircleRadius() {
+    return (
+      (this.sideLengthA * this.sideLengthB * this.sideLengthC) /
+      (4 * this.getArea())
+    );
   }
 
-  getInnerCircle() {
+  getInnerCircleRadius() {
     return this.getArea() / (this.getCircumference() / 2);
   }
 }

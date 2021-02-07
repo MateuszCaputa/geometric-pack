@@ -16,13 +16,13 @@ const firstPolygon = new Polygon(3, 5);
 
 const secondTriangle = new Triangle(5, 3, 4);
 
-console.log(firstTriangle.triangle());
-console.log(firstRectangle.rectangle());
-console.log(firstSquare.square());
-console.log(firstCircle.circle());
-console.log(firstRhombus.rhombus());
-console.log(firstParallelogram.parallelogram());
-console.log(firstPolygon.polygon());
+console.log(firstTriangle.getDefinition());
+console.log(firstRectangle.getDefinition());
+console.log(firstSquare.getDefinition());
+console.log(firstCircle.getDefinition());
+console.log(firstRhombus.getDefinition());
+console.log(firstParallelogram.getDefinition());
+console.log(firstPolygon.getDefinition());
 
 console.log(firstTriangle.isCongruent(secondTriangle));
 console.log(secondTriangle.isIdentical(firstTriangle));

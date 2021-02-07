@@ -3,29 +3,27 @@ import { transformRadiansToDegrees } from "./transform.js";
 export class Rhombus {
   constructor(...args) {
     this.validateInput(args);
-    this.a = args[0];
-    this.h = args[1];
+    this.sideLength = args[0];
+    this.height = args[1];
   }
 
   validateInput(args) {
-    if (this.hasNegative(args)) {
-      throw new Error("arguments must be a positive numbers");
-    }
     if (args.length !== 2) {
-      throw new Error("class Rhombus must have 2 arguments");
+      throw new Error("Rhombus constructor takes 2 arguments");
+    }
+    if (this.hasNegative(args)) {
+      throw new Error("Side length and height must be positive numbers");
     }
   }
 
-  hasNegative(args) {
-    const [a, h] = args;
-    return a <= 0 || h <= 0;
+  hasNegative([sideLength, height]) {
+    return sideLength <= 0 || height <= 0;
   }
 
-  rhombus() {
+  getDefinition() {
     return {
-      a: this.a,
-      height: this.h,
-
+      sideLength: this.sideLength,
+      height: this.height,
       circumference: this.getCircumference(),
       area: this.getArea(),
       cornerAngles: this.getAngles(),
@@ -34,15 +32,15 @@ export class Rhombus {
   }
 
   getCircumference() {
-    return this.a * 4;
+    return this.sideLength * 4;
   }
 
   getArea() {
-    return this.a * this.h;
+    return this.sideLength * this.height;
   }
 
   getAlpha() {
-    const radians = Math.asin(this.h / this.a);
+    const radians = Math.asin(this.height / this.sideLength);
     return transformRadiansToDegrees(radians);
   }
 
@@ -59,22 +57,26 @@ export class Rhombus {
 
   getLongerDiagonal() {
     return Math.sqrt(
-      2 * Math.pow(this.a, 2) +
-        2 * Math.pow(this.a, 2) * Math.cos((this.getAlpha() * Math.PI) / 180)
+      2 * Math.pow(this.sideLength, 2) +
+        2 *
+          Math.pow(this.sideLength, 2) *
+          Math.cos((this.getAlpha() * Math.PI) / 180)
     );
   }
 
   getShorterDiagonal() {
     return Math.sqrt(
-      2 * Math.pow(this.a, 2) -
-        2 * Math.pow(this.a, 2) * Math.cos((this.getAlpha() * Math.PI) / 180)
+      2 * Math.pow(this.sideLength, 2) -
+        2 *
+          Math.pow(this.sideLength, 2) *
+          Math.cos((this.getAlpha() * Math.PI) / 180)
     );
   }
 
   getDiagonals() {
     return {
-      p: this.getLongerDiagonal(),
-      q: this.getShorterDiagonal(),
+      longerDiagonal: this.getLongerDiagonal(),
+      shorterDiagonal: this.getShorterDiagonal(),
     };
   }
 }

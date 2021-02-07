@@ -1,29 +1,27 @@
 export class Rectangle {
-  constructor(...sides) {
-    this.validateInput(sides);
-    this.a = sides[0];
-    this.b = sides[1];
+  constructor(...args) {
+    this.validateInput(args);
+    this.sideLengthA = args[0];
+    this.sideLengthB = args[1];
   }
 
-  validateInput(sides) {
-    if (this.hasNegative(sides)) {
-      throw new Error("arguments must be a positive numbers");
+  validateInput(args) {
+    if (args.length !== 2) {
+      throw new Error("Rectangle takes 2 arguments");
     }
-    if (sides.length !== 2) {
-      throw new Error("class Rectangle must have 2 arguments");
+    if (this.hasNegative(args)) {
+      throw new Error("Sides lengths must be positive numbers");
     }
   }
 
-  hasNegative(sides) {
-    const [a, b] = sides;
-    return a <= 0 || b <= 0;
+  hasNegative([sideLengthA, sideLengthB]) {
+    return sideLengthA <= 0 || sideLengthB <= 0;
   }
 
-  rectangle() {
+  getDefinition() {
     return {
-      a: this.a,
-      b: this.b,
-
+      sideLengthA: this.sideLengthA,
+      sideLengthB: this.sideLengthB,
       circumference: this.getCircumference(),
       area: this.getArea(),
       diagonal: this.getDiagonal(),
@@ -31,14 +29,16 @@ export class Rectangle {
   }
 
   getCircumference() {
-    return this.a * 2 + this.b * 2;
+    return this.sideLengthA * 2 + this.sideLengthB * 2;
   }
 
   getArea() {
-    return this.a * this.b;
+    return this.sideLengthA * this.sideLengthB;
   }
 
   getDiagonal() {
-    return Math.sqrt(Math.pow(this.a, 2) + Math.pow(this.b, 2));
+    return Math.sqrt(
+      Math.pow(this.sideLengthA, 2) + Math.pow(this.sideLengthB, 2)
+    );
   }
 }

@@ -1,42 +1,40 @@
 export class Circle {
   constructor(...args) {
     this.validateInput(args);
-    this.r = args[0];
+    this.radius = args[0];
   }
 
   validateInput(args) {
-    if (this.hasNegative(args)) {
-      throw new Error("argument must be a positive number");
-    }
     if (args.length !== 1) {
-      throw new Error("class Circle must have 1 argument");
+      throw new Error("Circle constructor takes 1 argument");
+    }
+    if (this.hasNegative(args[0])) {
+      throw new Error("radius must be positive number");
     }
   }
 
-  hasNegative(args) {
-    const r = args[0];
-    return r <= 0;
+  hasNegative(radius) {
+    return radius <= 0;
   }
 
-  circle() {
+  getDefinition() {
     return {
-      radius: this.r,
+      radius: this.radius,
       diameter: this.getDiameter(),
-
       circumference: this.getCircumference(),
       area: this.getArea(),
     };
   }
 
   getCircumference() {
-    return 2 * Math.PI * this.r;
+    return 2 * Math.PI * this.radius;
   }
 
   getArea() {
-    return Math.PI * Math.pow(this.r, 2);
+    return Math.PI * Math.pow(this.radius, 2);
   }
 
   getDiameter() {
-    return 2 * this.r;
+    return 2 * this.radius;
   }
 }

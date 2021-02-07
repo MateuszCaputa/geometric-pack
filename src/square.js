@@ -1,52 +1,50 @@
 export class Square {
-  constructor(...sides) {
-    this.validateInput(sides);
-    this.a = sides[0];
+  constructor(...args) {
+    this.validateInput(args);
+    this.sideLength = args[0];
   }
 
-  validateInput(sides) {
-    if (this.hasNegative(sides)) {
-      throw new Error("arguments must be a positive numbers");
+  validateInput(args) {
+    if (args.length !== 1) {
+      throw new Error("Square constructor takes 1 argument");
     }
-    if (sides.length !== 1) {
-      throw new Error("class Square must have 1 argument");
+    if (this.hasNegative(args)) {
+      throw new Error("Side length must be positive number");
     }
   }
 
-  hasNegative(sides) {
-    const a = sides[0];
-    return a <= 0;
+  hasNegative([sideLength]) {
+    return sideLength <= 0;
   }
 
-  square() {
+  getDefinition() {
     return {
-      a: this.a,
-
+      sideLength: this.sideLength,
       circumference: this.getCircumference(),
       area: this.getArea(),
       diagonal: this.getDiagonal(),
-      radiusOfOuterCircle: this.getOuterCircle(),
-      radiusOfInnerCircle: this.getInnerCircle(),
+      outerCircleRadius: this.getOuterCircleRadius(),
+      innerCircleRadius: this.getInnerCircleRadius(),
     };
   }
 
   getCircumference() {
-    return this.a * 4;
+    return this.sideLength * 4;
   }
 
   getArea() {
-    return Math.pow(this.a, 2);
+    return Math.pow(this.sideLength, 2);
   }
 
   getDiagonal() {
     return Math.sqrt(this.getArea() * 2);
   }
 
-  getOuterCircle() {
+  getOuterCircleRadius() {
     return this.getDiagonal() / 2;
   }
 
-  getInnerCircle() {
-    return this.a / 2;
+  getInnerCircleRadius() {
+    return this.sideLength / 2;
   }
 }
