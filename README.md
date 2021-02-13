@@ -75,6 +75,14 @@ Available classes:
   program will take it as radius 'r' in
   exact order
 
+- Cube, You have to use one argument and
+  program will take it as length side 'a'
+
+- ConicalFrustum, You have to use three
+  arguments and program will take them as
+  radius1 'r1', radius2 'r2' and height 'h'
+  in exact order
+
 ## Example of use
 
 You can check example how this program works in src/utils/example.js

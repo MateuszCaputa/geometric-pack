@@ -9,6 +9,8 @@ import { Polygon } from "../two-dimensional/polygon.js";
 import { Cone } from "../three-dimensional/cone.js";
 import { Cylinder } from "../three-dimensional/cylinder.js";
 import { Sphere } from "../three-dimensional/sphere.js";
+import { Cube } from "../three-dimensional/cube.js";
+import { ConicalFrustum } from "../three-dimensional/conical_frustum.js";
 
 const firstTriangle = new Triangle(5, 3, 4);
 const firstRectangle = new Rectangle(5, 2);
@@ -23,6 +25,8 @@ const secondTriangle = new Triangle(5, 3, 4);
 const firstCone = new Cone(3, 7);
 const firstCylinder = new Cylinder(4, 6);
 const firstSphere = new Sphere(6);
+const firstCube = new Cube(5);
+const firstConicalFrustum = new ConicalFrustum(3, 4, 5);
 
 console.log(firstTriangle.getDefinition());
 console.log(firstRectangle.getDefinition());
@@ -38,3 +42,5 @@ console.log(secondTriangle.isIdentical(firstTriangle));
 console.log(firstCone.getDefinition());
 console.log(firstCylinder.getDefinition());
 console.log(firstSphere.getDefinition());
+console.log(firstCube.getDefinition());
+console.log(firstConicalFrustum.getDefinition());
