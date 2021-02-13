@@ -63,6 +63,18 @@ Available classes:
   side 'a' and number of sides 'n' where 3 <= n <= 14
   in exact order
 
+- Cone, You have to use two arguments and
+  program will take them as radius 'r' and
+  height 'h' in exact order
+
+- Cylinder, You have to use two arguments and
+  program will take them as radius 'r' and
+  height 'h' in exact order
+
+- Sphere, You have to use one argument and
+  program will take it as radius 'r' in
+  exact order
+
 ## Example of use
 
-You can check example how this program works in src/example.js
+You can check example how this program works in src/utils/example.js

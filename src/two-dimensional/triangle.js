@@ -1,4 +1,4 @@
-import { transformRadiansToDegrees } from "./transform.js";
+import { transformRadiansToDegrees } from "../utils/transform.js";
 
 export class Triangle {
   constructor(...args) {

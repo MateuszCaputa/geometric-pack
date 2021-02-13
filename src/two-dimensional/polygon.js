@@ -1,4 +1,4 @@
-import { transformRadiansToDegrees } from "./transform.js";
+import { transformRadiansToDegrees } from "../utils/transform.js";
 
 export class Polygon {
   constructor(...args) {
@@ -45,7 +45,10 @@ export class Polygon {
 
   getArea() {
     return (
-      (1 / 4) * this.vertexCount * Math.pow(this.sideLength, 2) * (1 / Math.tan(Math.PI / this.vertexCount))
+      (1 / 4) *
+      this.vertexCount *
+      Math.pow(this.sideLength, 2) *
+      (1 / Math.tan(Math.PI / this.vertexCount))
     );
   }
 
@@ -67,10 +70,14 @@ export class Polygon {
   }
 
   getOuterCircleRadius() {
-    return (1 / 2) * this.sideLength * (1 / Math.sin(Math.PI / this.vertexCount));
+    return (
+      (1 / 2) * this.sideLength * (1 / Math.sin(Math.PI / this.vertexCount))
+    );
   }
 
   getInnerCircleRadius() {
-    return (1 / 2) * this.sideLength * (1 / Math.tan(Math.PI / this.vertexCount));
+    return (
+      (1 / 2) * this.sideLength * (1 / Math.tan(Math.PI / this.vertexCount))
+    );
   }
 }
