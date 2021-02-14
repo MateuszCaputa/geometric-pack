@@ -63,6 +63,10 @@ Available classes:
   side 'a' and number of sides 'n' where 3 <= n <= 14
   in exact order
 
+- Stadium, You have to use two arguments and
+  program will take them as side length 'a'
+  and radius 'r' in exact order
+
 - Cone, You have to use two arguments and
   program will take them as radius 'r' and
   height 'h' in exact order
@@ -72,8 +76,7 @@ Available classes:
   height 'h' in exact order
 
 - Sphere, You have to use one argument and
-  program will take it as radius 'r' in
-  exact order
+  program will take it as radius 'r'
 
 - Cube, You have to use one argument and
   program will take it as length side 'a'
@@ -82,6 +85,22 @@ Available classes:
   arguments and program will take them as
   radius1 'r1', radius2 'r2' and height 'h'
   in exact order
+
+- Capsule, You have to use two arguments
+  and program will take them as sideLength
+  'a' and radius 'r' in exact order
+
+- Hemisphere, You have to use two one
+  argument and program will take it as
+  radius 'r'
+
+- Pyramid, You have to use two arguments
+  and program will take them as side length
+  'a' and height 'h' in exact order
+
+- Cuboid, You have to use three arguments
+  and program will take them as length 'l',
+  width 'w' and height 'h' in exact order
 
 ## Example of use
 
