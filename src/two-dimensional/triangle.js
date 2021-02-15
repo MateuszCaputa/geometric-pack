@@ -27,11 +27,11 @@ export class Triangle {
 
   isTriangle([sideLengthA, sideLengthB, sideLengthC]) {
     return (
-      sideLengthA <= 0 &&
-      sideLengthB <= 0 &&
-      sideLengthC <= 0 &&
-      sideLengthA + sideLengthB <= sideLengthC &&
-      sideLengthA + sideLengthC <= sideLengthB &&
+      sideLengthA <= 0 ||
+      sideLengthB <= 0 ||
+      sideLengthC <= 0 ||
+      sideLengthA + sideLengthB <= sideLengthC ||
+      sideLengthA + sideLengthC <= sideLengthB ||
       sideLengthB + sideLengthC <= sideLengthA
     );
   }
