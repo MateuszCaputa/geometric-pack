@@ -67,6 +67,10 @@ Available classes:
   program will take them as side length 'a'
   and radius 'r' in exact order
 
+- Distance2D, You have to use four arguments
+  and program will take them as coordinates
+  'x1', 'y1', 'x2', 'y2' in exact order
+
 - Cone, You have to use two arguments and
   program will take them as radius 'r' and
   height 'h' in exact order
@@ -101,6 +105,11 @@ Available classes:
 - Cuboid, You have to use three arguments
   and program will take them as length 'l',
   width 'w' and height 'h' in exact order
+
+- Distance3D, You have to use six arguments
+  and program will take them as coordinates
+  'x1', 'y1', 'z1', 'x2', 'y2', 'z2' in exact
+  order
 
 ## Example of use
 
