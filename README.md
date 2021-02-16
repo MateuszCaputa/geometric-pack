@@ -36,80 +36,84 @@ To use available calculations in this project you will have to create object of 
 
 Available classes:
 
-- Triangle, You have to use three arguments and program will take
-  them as a sides of triangle 'a', 'b', 'c', you can write them
-  in any order you want because program will sort them a < b < c
+- Two-dimensional
 
-- Rectangle, You have to use two arguments and program will take
-  them as a sides of rectangle 'a', 'b', program will
-  not sort them in any order
+  - Triangle, You have to use three arguments and program will take
+    them as a sides of triangle 'a', 'b', 'c', you can write them
+    in any order you want because program will sort them a < b < c
 
-- Square, You have to use one argument and
-  program will take it as a side of square 'a'
+  - Rectangle, You have to use two arguments and program will take
+    them as a sides of rectangle 'a', 'b', program will
+    not sort them in any order
 
-- Circle, You have to use one argument and
-  program will take it as a radius of circle 'r'
+  - Square, You have to use one argument and
+    program will take it as a side of square 'a'
 
-- Rhombus, You have to use two arguments and
-  program will take them as side 'a'
-  and height 'h' in exact order
+  - Circle, You have to use one argument and
+    program will take it as a radius of circle 'r'
 
-- Parallelogram, You have to use three arguments
-  and program will take them as side 'a', side 'b'
-  and height 'h' in exact order
+  - Rhombus, You have to use two arguments and
+    program will take them as side 'a'
+    and height 'h' in exact order
 
-- Polygon, It's a regular polygon so you have to
-  use two arguments and program will take them as
-  side 'a' and number of sides 'n' where 3 <= n <= 14
-  in exact order
+  - Parallelogram, You have to use three arguments
+    and program will take them as side 'a', side 'b'
+    and height 'h' in exact order
 
-- Stadium, You have to use two arguments and
-  program will take them as side length 'a'
-  and radius 'r' in exact order
+  - Polygon, It's a regular polygon so you have to
+    use two arguments and program will take them as
+    side 'a' and number of sides 'n' where 3 <= n <= 14
+    in exact order
 
-- Distance2D, You have to use four arguments
-  and program will take them as coordinates
-  'x1', 'y1', 'x2', 'y2' in exact order
+  - Stadium, You have to use two arguments and
+    program will take them as side length 'a'
+    and radius 'r' in exact order
 
-- Cone, You have to use two arguments and
-  program will take them as radius 'r' and
-  height 'h' in exact order
+  - Distance2D, You have to use four arguments
+    and program will take them as coordinates
+    'x1', 'y1', 'x2', 'y2' in exact order
 
-- Cylinder, You have to use two arguments and
-  program will take them as radius 'r' and
-  height 'h' in exact order
+- Three-dimensional
 
-- Sphere, You have to use one argument and
-  program will take it as radius 'r'
+  - Cone, You have to use two arguments and
+    program will take them as radius 'r' and
+    height 'h' in exact order
 
-- Cube, You have to use one argument and
-  program will take it as length side 'a'
+  - Cylinder, You have to use two arguments and
+    program will take them as radius 'r' and
+    height 'h' in exact order
 
-- ConicalFrustum, You have to use three
-  arguments and program will take them as
-  radius1 'r1', radius2 'r2' and height 'h'
-  in exact order
+  - Sphere, You have to use one argument and
+    program will take it as radius 'r'
 
-- Capsule, You have to use two arguments
-  and program will take them as sideLength
-  'a' and radius 'r' in exact order
+  - Cube, You have to use one argument and
+    program will take it as length side 'a'
 
-- Hemisphere, You have to use two one
-  argument and program will take it as
-  radius 'r'
+  - ConicalFrustum, You have to use three
+    arguments and program will take them as
+    radius1 'r1', radius2 'r2' and height 'h'
+    in exact order
 
-- Pyramid, You have to use two arguments
-  and program will take them as side length
-  'a' and height 'h' in exact order
+  - Capsule, You have to use two arguments
+    and program will take them as sideLength
+    'a' and radius 'r' in exact order
 
-- Cuboid, You have to use three arguments
-  and program will take them as length 'l',
-  width 'w' and height 'h' in exact order
+  - Hemisphere, You have to use two one
+    argument and program will take it as
+    radius 'r'
 
-- Distance3D, You have to use six arguments
-  and program will take them as coordinates
-  'x1', 'y1', 'z1', 'x2', 'y2', 'z2' in exact
-  order
+  - Pyramid, You have to use two arguments
+    and program will take them as side length
+    'a' and height 'h' in exact order
+
+  - Cuboid, You have to use three arguments
+    and program will take them as length 'l',
+    width 'w' and height 'h' in exact order
+
+  - Distance3D, You have to use six arguments
+    and program will take them as coordinates
+    'x1', 'y1', 'z1', 'x2', 'y2', 'z2' in exact
+    order
 
 ## Example of use
 
