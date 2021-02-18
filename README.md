@@ -73,6 +73,10 @@ Available classes:
     and program will take them as coordinates
     'x1', 'y1', 'x2', 'y2' in exact order
 
+  - Annulus, You have to use two arguments and
+    program will take them as outerRadius 'r1'
+    and innerRadius 'r2' in exact order
+
 - Three-dimensional
 
   - Cone, You have to use two arguments and
