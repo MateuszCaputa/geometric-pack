@@ -19,6 +19,7 @@ import { Hemisphere } from "../three-dimensional/hemisphere.js";
 import { Pyramid } from "../three-dimensional/pyramid.js";
 import { Cuboid } from "../three-dimensional/cuboid.js";
 import { Distance3D } from "../three-dimensional/distance-3D.js";
+import { Tube } from "../three-dimensional/tube.js";
 
 const firstTriangle = new Triangle(5, 3, 4);
 const firstRectangle = new Rectangle(5, 2);
@@ -43,6 +44,7 @@ const firstHemisphere = new Hemisphere(9);
 const firstPyramid = new Pyramid(3, 8);
 const firstCuboid = new Cuboid(5, 2, 3);
 const firstDistance3D = new Distance3D(7, 4, 3, 17, 6, 2);
+const firstTube = new Tube(3, 2, 4);
 
 console.log(firstTriangle.getDefinition());
 
@@ -69,3 +71,4 @@ console.log(firstHemisphere.getDefinition());
 console.log(firstPyramid.getDefinition());
 console.log(firstCuboid.getDefinition());
 console.log(firstDistance3D.getDefinition());
+console.log(firstTube.getDefinition());

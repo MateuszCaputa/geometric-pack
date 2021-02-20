@@ -119,6 +119,11 @@ Available classes:
     'x1', 'y1', 'z1', 'x2', 'y2', 'z2' in exact
     order
 
+  - Tube, You have to use three arguments
+    and program will take them as outerRadius
+    'r1', innerRadius 'r2' and height 'h' in
+    exact order
+
 ## Example of use
 
 You can check example how this program works in src/utils/example.js
