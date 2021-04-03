@@ -12,7 +12,7 @@ Geometric calculator created with Node.js
 
 ## General info
 
-This project is geometric pack with lots of available calculations on any figure
+Geometric pack with lots of available calculations for 2D and 3D geometry.
 
 ## Technologies
 
