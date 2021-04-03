@@ -77,6 +77,10 @@ Available classes:
     program will take them as outerRadius 'r1'
     and innerRadius 'r2' in exact order
 
+  - Quadratic, You have two use three arguments
+    and program will take them as 'a', 'b' and 'c'
+    of function in exact order
+
 - Three-dimensional
 
   - Cone, You have to use two arguments and
