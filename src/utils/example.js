@@ -32,7 +32,7 @@ const firstPolygon = new Polygon(3, 5);
 const firstStadium = new Stadium(4, 2);
 const firstDistance2D = new Distance2D(-7, -4, 17, 6.5);
 const firstAnnulus = new Annulus(3, 1);
-const firstQuadratic = new Quadratic(1, -16, 48);
+const firstQuadratic = new Quadratic(-4, 4, 1);
 
 const secondTriangle = new Triangle(5, 3, 4);
 
