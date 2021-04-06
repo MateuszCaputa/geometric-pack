@@ -1,4 +1,4 @@
-export class Quadratic {
+export class QuadraticFunction {
   constructor(...args) {
     this.validateInput(args);
     this.a = args[0];
@@ -8,7 +8,7 @@ export class Quadratic {
 
   validateInput(args) {
     if (args.length !== 3) {
-      throw new Error("Quadratic constructor takes 3 arguments");
+      throw new Error("QuadraticFunction constructor takes 3 arguments");
     }
     if (args[0] === 0) {
       throw new Error("Coefficient 'a' can't be equal 0");

@@ -80,6 +80,10 @@ Available classes:
     and program will take them as 'a', 'b' and 'c'
     of function in exact order
 
+  - Linear, You have to use two arguments and
+    program will take them as 'a' and 'b' of
+    function in exact order
+
 - Three-dimensional
 
   - Cone, You have to use two arguments and

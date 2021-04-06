@@ -8,13 +8,14 @@ import { Polygon } from "../two-dimensional/polygon.js";
 import { Stadium } from "../two-dimensional/stadium.js";
 import { Distance2D } from "../two-dimensional/distance-2D.js";
 import { Annulus } from "../two-dimensional/annulus.js";
-import { Quadratic } from "../two-dimensional/quadratic.js";
+import { QuadraticFunction } from "../functions/quadratic-function.js";
+import { LinearFunction } from "../functions/linear-function.js";
 
 import { Cone } from "../three-dimensional/cone.js";
 import { Cylinder } from "../three-dimensional/cylinder.js";
 import { Sphere } from "../three-dimensional/sphere.js";
 import { Cube } from "../three-dimensional/cube.js";
-import { ConicalFrustum } from "../three-dimensional/conical_frustum.js";
+import { ConicalFrustum } from "../three-dimensional/conical-frustum.js";
 import { Capsule } from "../three-dimensional/capsule.js";
 import { Hemisphere } from "../three-dimensional/hemisphere.js";
 import { Pyramid } from "../three-dimensional/pyramid.js";
@@ -32,7 +33,8 @@ const firstPolygon = new Polygon(3, 5);
 const firstStadium = new Stadium(4, 2);
 const firstDistance2D = new Distance2D(-7, -4, 17, 6.5);
 const firstAnnulus = new Annulus(3, 1);
-const firstQuadratic = new Quadratic(-4, 4, 1);
+const firstQuadraticFunction = new QuadraticFunction(-4, 4, 1);
+const firstLinearFunction = new LinearFunction(0, 0);
 
 const secondTriangle = new Triangle(5, 3, 4);
 
@@ -62,7 +64,8 @@ console.log(firstPolygon.getDefinition());
 console.log(firstStadium.getDefinition());
 console.log(firstDistance2D.getDefinition());
 console.log(firstAnnulus.getDefinition());
-console.log(firstQuadratic.getDefinition());
+console.log(firstQuadraticFunction.getDefinition());
+console.log(firstLinearFunction.getDefinition());
 
 console.log(firstCone.getDefinition());
 console.log(firstCylinder.getDefinition());
