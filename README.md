@@ -76,11 +76,11 @@ Available classes:
     program will take them as outerRadius 'r1'
     and innerRadius 'r2' in exact order
 
-  - Quadratic, You have two use three arguments
+  - Quadratic Function, You have two use three arguments
     and program will take them as 'a', 'b' and 'c'
     of function in exact order
 
-  - Linear, You have to use two arguments and
+  - Linear Function, You have to use two arguments and
     program will take them as 'a' and 'b' of
     function in exact order
 
