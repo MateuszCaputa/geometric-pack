@@ -26,12 +26,21 @@ To run this project, install it locally using npm:
 
 ```
 $ cd ../lorem
+$ npm init
 $ npm i geometric-pack
 ```
 
 ## Launch
 
 To use available calculations in this project you will have to create object of class you want to use and start available methods
+
+```
+import { Triangle } from "geometric-pack";
+
+const firstTriangle = new Triangle(5, 3, 4);
+
+console.log(firstTriangle.getDefinition());
+```
 
 Available classes:
 
@@ -76,11 +85,11 @@ Available classes:
     program will take them as outerRadius 'r1'
     and innerRadius 'r2' in exact order
 
-  - Quadratic Function, You have two use three arguments
+  - `QuadraticFunction`, You have two use three arguments
     and program will take them as 'a', 'b' and 'c'
     of function in exact order
 
-  - Linear Function, You have to use two arguments and
+  - LinearFunction, You have to use two arguments and
     program will take them as 'a' and 'b' of
     function in exact order
 
@@ -133,4 +142,14 @@ Available classes:
 
 ## Example of use
 
-You can check example how this program works in src/utils/example.js
+```
+import { Triangle } from "geometric-pack";
+
+const firstTriangle = new Triangle(5, 3, 4);
+const secondTriangle = new Triangle(10, 6, 8);
+
+console.log(firstTriangle.isCongruent(secondTriangle)); // True
+console.log(firstTriangle.isIdentical(secondTriangle)); // False
+```
+
+You can also check more examples how this program works in src/utils/example.js

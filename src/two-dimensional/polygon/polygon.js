@@ -1,4 +1,4 @@
-import { transformRadiansToDegrees } from "../utils/transform.js";
+import { transformRadiansToDegrees } from "../../utils/transform.js";
 
 export class Polygon {
   constructor(...args) {

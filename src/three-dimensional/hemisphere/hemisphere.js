@@ -21,7 +21,7 @@ export class Hemisphere {
     return {
       radius: this.radius,
       volume: this.getVolume(),
-      circumference: this.getCircumference(),
+      baseCircumference: this.getBaseCircumference(),
       curvedSurfaceArea: this.getCurvedSurfaceArea(),
       baseSurfaceArea: this.getBaseSurfaceArea(),
       totalSurfaceArea: this.getTotalSurfaceArea(),
@@ -32,7 +32,7 @@ export class Hemisphere {
     return (2 / 3) * Math.PI * Math.pow(this.radius, 3);
   }
 
-  getCircumference() {
+  getBaseCircumference() {
     return 2 * Math.PI * this.radius;
   }
 
