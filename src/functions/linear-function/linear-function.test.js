@@ -49,12 +49,3 @@ test("should get end point of negative range of linear function", () => {
   const expected = -0.5;
   expect(result).toBe(expected);
 });
-
-// {
-//   a: 4,
-//   b: 2,
-//   solution: -0.5,
-//   monotonicity: 'increasing',
-//   positiveRange: [ -0.5, Infinity ],
-//   negativeRange: [ -Infinity, -0.5 ]
-// }
