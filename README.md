@@ -5,29 +5,19 @@ Geometric calculator created with Node.js
 ## Table of contents
 
 - [General info](#general-info)
-- [Technologies](#technologies)
-- [Setup](#setup)
+- [Example](#example)
 - [Launch](#launch)
-- [Example of use](#example-of-use)
+- [Setup](#setup)
+- [Technologies](#technologies)
 
 ## General info
 
 Geometric pack with lots of available calculations for 2D and 3D geometry.
 
-## Setup
-
-To run this project, install it locally using npm:
-
-```
-$ cd ../lorem
-$ npm init
-$ npm i geometric-pack
-```
-
 ## Example
 
 ```js
-import { Triangle } from "geometric-pack";
+const { Triangle } = require("geometric-pack");
 
 const firstTriangle = new Triangle(5, 3, 4);
 const secondTriangle = new Triangle(10, 6, 8);
@@ -43,7 +33,7 @@ You can also check more examples how this program works in src/utils/example.js
 To use available calculations in this project you will have to create object of class you want to use and start available methods
 
 ```js
-import { Triangle } from "geometric-pack";
+const { Triangle } = require("geometric-pack");
 
 const firstTriangle = new Triangle(5, 3, 4);
 
@@ -148,8 +138,18 @@ Available classes:
     'r1', innerRadius 'r2' and height 'h' in
     exact order
 
+  ## Setup
+
+  To run this project, install it locally using npm:
+
+  ```
+  $ cd ../lorem
+  $ npm init
+  $ npm i geometric-pack
+  ```
+
   ## Technologies
 
   Project is created with:
 
-  - node: 12.18.3
+  - node: 14.16.1

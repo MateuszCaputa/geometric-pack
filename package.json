@@ -1,12 +1,11 @@
 {
   "name": "geometric-pack",
   "description": "Geometric pack with lots of available calculations for 2D and 3D geometry",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/MateuszCaputa/geometric-pack.git"
   },
-  "type": "module",
   "keywords": [
     "geometric",
     "pack",
@@ -50,15 +49,18 @@
   },
   "homepage": "https://github.com/MateuszCaputa/geometric-pack",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest ./src",
+    "test:watch": "jest ./src --watch",
+    "build": "babel --config-file ./babel.config.json -d ./dist ./src",
+    "prepublish": "npm run build"
   },
-  "main": "./src",
   "files": [
-    "./src/**/*.js",
-    "!./src/**/*.test.js"
+    "dist/**/*.js",
+    "!*.test.js"
   ],
+  "main": "./dist",
   "devDependencies": {
+    "@babel/cli": "^7.13.16",
     "@babel/core": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
     "babel-jest": "^26.6.3",
