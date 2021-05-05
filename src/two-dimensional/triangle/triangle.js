@@ -121,7 +121,7 @@ export class Triangle {
     };
   }
 
-  isIdentical(triangle) {
+  isCongruent(triangle) {
     return (
       this.sideLengthA === triangle.sideLengthA &&
       this.sideLengthB === triangle.sideLengthB &&
@@ -129,7 +129,7 @@ export class Triangle {
     );
   }
 
-  isCongruent(triangle) {
+  isSimilar(triangle) {
     return (
       this.getGamma() === triangle.getGamma() &&
       this.getBeta() === triangle.getBeta() &&

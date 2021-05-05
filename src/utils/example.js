@@ -36,7 +36,7 @@ const firstAnnulus = new Annulus(3, 1);
 const firstQuadraticFunction = new QuadraticFunction(-4, 4, 1);
 const firstLinearFunction = new LinearFunction(4, 2);
 
-const secondTriangle = new Triangle(5, 3, 4);
+const secondTriangle = new Triangle(10, 6, 8);
 
 const firstCone = new Cone(3, 7);
 const firstCylinder = new Cylinder(4, 6);
@@ -52,8 +52,8 @@ const firstTube = new Tube(3, 2, 4);
 
 console.log(firstTriangle.getDefinition());
 
-console.log(firstTriangle.isCongruent(secondTriangle));
-console.log(secondTriangle.isIdentical(firstTriangle));
+console.log("isCongruent:", firstTriangle.isCongruent(secondTriangle));
+console.log("isSimilar:", secondTriangle.isSimilar(firstTriangle));
 
 console.log(firstRectangle.getDefinition());
 console.log(firstSquare.getDefinition());

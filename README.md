@@ -22,8 +22,8 @@ const { Triangle } = require("geometric-pack");
 const firstTriangle = new Triangle(5, 3, 4);
 const secondTriangle = new Triangle(10, 6, 8);
 
-console.log(firstTriangle.isCongruent(secondTriangle)); // True
-console.log(firstTriangle.isIdentical(secondTriangle)); // False
+console.log(firstTriangle.isCongruent(secondTriangle)); // False
+console.log(firstTriangle.isSimilar(secondTriangle)); // True
 ```
 
 You can also check more examples how this program works in src/utils/example.js

@@ -1,7 +1,7 @@
 import { Triangle } from "./triangle";
 
 const firstTriangle = new Triangle(5, 3, 4);
-const secondTriangle = new Triangle(5, 3, 4);
+const secondTriangle = new Triangle(10, 6, 8);
 
 test("should get length side 'a' of triangle", () => {
   const result = firstTriangle.sideLengthA;
@@ -89,12 +89,12 @@ test("should get inner circle radius of triangle", () => {
 
 test("should tell if first Triangle is congruent to second Triangle", () => {
   const result = firstTriangle.isCongruent(secondTriangle);
-  const expected = true;
+  const expected = false;
   expect(result).toBe(expected);
 });
 
 test("should tell if second Triangle is identical to first Triangle", () => {
-  const result = secondTriangle.isCongruent(firstTriangle);
+  const result = secondTriangle.isSimilar(firstTriangle);
   const expected = true;
   expect(result).toBe(expected);
 });
