@@ -26,7 +26,7 @@ console.log(firstTriangle.isCongruent(secondTriangle)); // False
 console.log(firstTriangle.isSimilar(secondTriangle)); // True
 ```
 
-You can also check more examples how this program works in src/utils/example.js
+You can also check more examples by running `.getDefinition()` method on other classes
 
 ## Launch
 
@@ -38,6 +38,20 @@ const { Triangle } = require("geometric-pack");
 const firstTriangle = new Triangle(5, 3, 4);
 
 console.log(firstTriangle.getDefinition());
+
+returns:
+{
+  sideLengthA: 3,
+  sideLengthB: 4,
+  sideLengthC: 5,
+  circumference: 12,
+  area: 6,
+  rightAngle: true,
+  heights: { heightOfBaseA: 4, heightOfBaseB: 3, heightOfBaseC: 2.4 },
+  angles: { gamma: 90, beta: 53.13010235415598, alpha: 36.86989764584402 },
+  outerCircleRadius: 2.5,
+  innerCircleRadius: 1
+}
 ```
 
 Available classes:
