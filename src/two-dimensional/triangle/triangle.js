@@ -92,9 +92,9 @@ export class Triangle {
     };
   }
 
-  getGamma() {
+  getAlpha() {
     const radians = Math.asin(
-      (2 * this.getArea()) / (this.sideLengthA * this.sideLengthB)
+      (2 * this.getArea()) / (this.sideLengthB * this.sideLengthC)
     );
     return transformRadiansToDegrees(radians);
   }
@@ -106,18 +106,15 @@ export class Triangle {
     return transformRadiansToDegrees(radians);
   }
 
-  getAlpha() {
-    const radians = Math.asin(
-      (2 * this.getArea()) / (this.sideLengthB * this.sideLengthC)
-    );
-    return transformRadiansToDegrees(radians);
+  getGamma() {
+    return 180 - (this.getAlpha() + this.getBeta());
   }
 
   getAngles() {
     return {
-      gamma: this.getGamma(),
-      beta: this.getBeta(),
       alpha: this.getAlpha(),
+      beta: this.getBeta(),
+      gamma: this.getGamma(),
     };
   }
 
