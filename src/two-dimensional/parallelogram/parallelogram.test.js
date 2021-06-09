@@ -46,12 +46,12 @@ test("should get beta angle of parallelogram", () => {
 
 test("should get longer diagonal of parallelogram", () => {
   const result = firstParallelogram.getLongerDiagonal();
-  const expected = 10;
+  const expected = 19.697715603592208;
   expect(result).toBe(expected);
 });
 
 test("should get shorter diagonal of parallelogram", () => {
   const result = firstParallelogram.getShorterDiagonal();
-  const expected = 19.697715603592208;
+  const expected = 10;
   expect(result).toBe(expected);
 });

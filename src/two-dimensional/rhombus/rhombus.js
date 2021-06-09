@@ -11,6 +11,9 @@ export class Rhombus {
     if (args.length !== 2) {
       throw new Error("Rhombus constructor takes 2 arguments");
     }
+    if (args[1] > args[0]) {
+      throw new Error("Height must be less than or equal to the side length");
+    }
     if (this.hasNegative(args)) {
       throw new Error("Side length and height must be positive numbers");
     }

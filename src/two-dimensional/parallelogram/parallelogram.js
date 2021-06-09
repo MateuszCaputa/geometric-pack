@@ -60,7 +60,7 @@ export class Parallelogram {
   getLongerDiagonal() {
     return Math.sqrt(
       Math.pow(this.sideLengthA, 2) +
-        Math.pow(this.sideLengthB, 2) -
+        Math.pow(this.sideLengthB, 2) +
         2 *
           this.sideLengthA *
           this.sideLengthB *
@@ -71,7 +71,7 @@ export class Parallelogram {
   getShorterDiagonal() {
     return Math.sqrt(
       Math.pow(this.sideLengthA, 2) +
-        Math.pow(this.sideLengthB, 2) +
+        Math.pow(this.sideLengthB, 2) -
         2 *
           this.sideLengthA *
           this.sideLengthB *
