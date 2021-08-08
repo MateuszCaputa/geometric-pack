@@ -1,1 +1,1 @@
-export type LinearFunctionInequality = [] | [number | null, number | null];
+export type LinearFunctionInequality = [] | [number, number];

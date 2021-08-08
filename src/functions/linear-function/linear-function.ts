@@ -55,10 +55,10 @@ export class LinearFunction {
 
   getPositiveRange(): LinearFunctionInequality {
     const solution = this.getSolution();
-    if (this.a > 0) {
-      return [solution, Infinity];
-    }
-    if (this.a < 0) {
+    if (solution !== null) {
+      if (this.a > 0) {
+        return [solution, Infinity];
+      }
       return [-Infinity, solution];
     }
     if (this.b > 0) {
@@ -69,10 +69,10 @@ export class LinearFunction {
 
   getNegativeRange(): LinearFunctionInequality {
     const solution = this.getSolution();
-    if (this.a > 0) {
-      return [-Infinity, solution];
-    }
-    if (this.a < 0) {
+    if (solution !== null) {
+      if (this.a > 0) {
+        return [-Infinity, solution];
+      }
       return [solution, Infinity];
     }
     if (this.b < 0) {
