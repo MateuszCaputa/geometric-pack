@@ -1,6 +1,6 @@
 # Geometric pack
 
-Geometric calculator created with Node.js
+Geometric calculator created with TypeScript
 
 ## Table of contents
 
@@ -12,12 +12,12 @@ Geometric calculator created with Node.js
 
 ## General info
 
-Geometric pack with lots of available calculations for 2D and 3D geometry.
+Geometric pack with lots of available calculations for 2D and 3D geometry
 
 ## Example
 
-```js
-const { Triangle } = require("geometric-pack");
+```ts
+import { Triangle } from "geometric-pack";
 
 const firstTriangle = new Triangle(5, 3, 4);
 const secondTriangle = new Triangle(10, 6, 8);
@@ -26,14 +26,18 @@ console.log(firstTriangle.isCongruent(secondTriangle)); // False
 console.log(firstTriangle.isSimilar(secondTriangle)); // True
 ```
 
-You can also check more examples by running `.getDefinition()` method on other classes
+You can also check more examples by running `.getDefinition()` method on other classes or by running example file
+
+```
+$ node geometric-pack/utils/example
+```
 
 ## Launch
 
 To use available calculations in this project you will have to create object of class you want to use and start available methods
 
-```js
-const { Triangle } = require("geometric-pack");
+```ts
+import { Triangle } from "geometric-pack";
 
 const firstTriangle = new Triangle(5, 3, 4);
 
@@ -154,7 +158,7 @@ Available classes:
 
   ## Setup
 
-  To run this project, install it locally using npm:
+  To run this project, install it locally using npm
 
   ```
   $ cd ../lorem
@@ -166,4 +170,4 @@ Available classes:
 
   Project is created with:
 
-  - node: 14.16.1
+  - TypeScript: 4.3.5
