@@ -1,9 +1,10 @@
 import { transformRadiansToDegrees } from "../../utils/transform";
-import { TriangleAngles } from "./models/triangle-angles";
+import { GetDefinition } from "../../models/get-definition";
 import { TriangleDefinition } from "./models/triangle-definition";
+import { TriangleAngles } from "./models/triangle-angles";
 import { TriangleHeights } from "./models/triangle-heights";
 
-export class Triangle {
+export class Triangle implements GetDefinition<TriangleDefinition> {
   public sideLengthA: number;
   public sideLengthB: number;
   public sideLengthC: number;

@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { HemisphereDefinition } from "./models/hemisphere-definition";
 
-export class Hemisphere {
+export class Hemisphere implements GetDefinition<HemisphereDefinition> {
   public radius: number;
 
   constructor(...args: number[]) {

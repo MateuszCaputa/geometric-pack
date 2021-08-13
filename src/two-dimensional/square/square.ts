@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { SquareDefinition } from "./models/square-definition";
 
-export class Square {
+export class Square implements GetDefinition<SquareDefinition> {
   public sideLength: number;
 
   constructor(...args: number[]) {

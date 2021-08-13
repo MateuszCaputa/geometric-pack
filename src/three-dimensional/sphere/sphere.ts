@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { SphereDefinition } from "./models/sphere-definition";
 
-export class Sphere {
+export class Sphere implements GetDefinition<SphereDefinition> {
   public radius: number;
 
   constructor(...args: number[]) {

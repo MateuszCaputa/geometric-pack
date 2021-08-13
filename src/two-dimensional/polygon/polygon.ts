@@ -1,8 +1,9 @@
 import { transformRadiansToDegrees } from "../../utils/transform";
-import { PolygonAngles } from "./models/polygon-angles";
+import { GetDefinition } from "../../models/get-definition";
 import { PolygonDefinition } from "./models/polygon-definition";
+import { PolygonAngles } from "./models/polygon-angles";
 
-export class Polygon {
+export class Polygon implements GetDefinition<PolygonDefinition> {
   public sideLength: number;
   public vertexCount: number;
 

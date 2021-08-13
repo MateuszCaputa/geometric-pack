@@ -1,7 +1,8 @@
+import { GetDefinition } from "../../models/get-definition";
 import { LinearFunctionDefinition } from "./models/linear-function-definition";
 import { LinearFunctionInequality } from "./models/linear-function-inequality";
 
-export class LinearFunction {
+export class LinearFunction implements GetDefinition<LinearFunctionDefinition> {
   public a: number;
   public b: number;
 

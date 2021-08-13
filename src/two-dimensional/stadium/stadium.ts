@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { StadiumDefinition } from "./models/stadium-definition";
 
-export class Stadium {
+export class Stadium implements GetDefinition<StadiumDefinition> {
   public sideLength: number;
   public radius: number;
 

@@ -1,9 +1,10 @@
 import { transformRadiansToDegrees } from "../../utils/transform";
-import { RhombusAngles } from "./models/rhombus-angles";
+import { GetDefinition } from "../../models/get-definition";
 import { RhombusDefinition } from "./models/rhombus-definition";
+import { RhombusAngles } from "./models/rhombus-angles";
 import { RhombusDiagonals } from "./models/rhombus-diagonals";
 
-export class Rhombus {
+export class Rhombus implements GetDefinition<RhombusDefinition> {
   public sideLength: number;
   public height: number;
 

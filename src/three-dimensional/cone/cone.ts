@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { ConeDefinition } from "./models/cone-definition";
 
-export class Cone {
+export class Cone implements GetDefinition<ConeDefinition> {
   public radius: number;
   public height: number;
 

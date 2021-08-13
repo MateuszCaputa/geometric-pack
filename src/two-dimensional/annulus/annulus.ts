@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { AnnulusDefinition } from "./models/annulus-definition";
 
-export class Annulus {
+export class Annulus implements GetDefinition<AnnulusDefinition> {
   public outerRadius: number;
   public innerRadius: number;
 

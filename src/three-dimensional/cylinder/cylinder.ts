@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { CylinderDefinition } from "./models/cylinder-definition";
 
-export class Cylinder {
+export class Cylinder implements GetDefinition<CylinderDefinition> {
   public radius: number;
   public height: number;
 

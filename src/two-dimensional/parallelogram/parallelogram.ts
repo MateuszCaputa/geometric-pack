@@ -1,9 +1,10 @@
 import { transformRadiansToDegrees } from "../../utils/transform";
-import { ParallelogramAngles } from "./models/parallelogram-angles";
+import { GetDefinition } from "../../models/get-definition";
 import { ParallelogramDefinition } from "./models/parallelogram-definition";
+import { ParallelogramAngles } from "./models/parallelogram-angles";
 import { ParallelogramDiagonals } from "./models/parallelogram-diagonals";
 
-export class Parallelogram {
+export class Parallelogram implements GetDefinition<ParallelogramDefinition> {
   public sideLengthA: number;
   public sideLengthB: number;
   public height: number;

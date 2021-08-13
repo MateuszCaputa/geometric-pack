@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { PyramidDefinition } from "./models/pyramid-definition";
 
-export class Pyramid {
+export class Pyramid implements GetDefinition<PyramidDefinition> {
   public sideLength: number;
   public height: number;
 

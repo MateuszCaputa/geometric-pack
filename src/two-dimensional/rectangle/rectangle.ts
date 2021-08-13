@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { RectangleDefinition } from "./models/rectangle-definition";
 
-export class Rectangle {
+export class Rectangle implements GetDefinition<RectangleDefinition> {
   public sideLengthA: number;
   public sideLengthB: number;
 

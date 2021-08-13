@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { CapsuleDefinition } from "./models/capsule-definition";
 
-export class Capsule {
+export class Capsule implements GetDefinition<CapsuleDefinition> {
   public sideLength: number;
   public radius: number;
 

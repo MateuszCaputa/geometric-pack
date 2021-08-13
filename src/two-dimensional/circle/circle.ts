@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { CircleDefinition } from "./models/circle-definition";
 
-export class Circle {
+export class Circle implements GetDefinition<CircleDefinition> {
   public radius: number;
 
   constructor(...args: number[]) {

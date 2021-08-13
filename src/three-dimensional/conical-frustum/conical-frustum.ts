@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { ConicalFrustumDefinition } from "./models/conical-frustum-definition";
 
-export class ConicalFrustum {
+export class ConicalFrustum implements GetDefinition<ConicalFrustumDefinition> {
   public radius1: number;
   public radius2: number;
   public height: number;

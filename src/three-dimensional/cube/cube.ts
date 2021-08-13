@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { CubeDefinition } from "./models/cube-definition";
 
-export class Cube {
+export class Cube implements GetDefinition<CubeDefinition> {
   public sideLength: number;
 
   constructor(...args: number[]) {

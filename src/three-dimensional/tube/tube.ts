@@ -1,6 +1,7 @@
+import { GetDefinition } from "../../models/get-definition";
 import { TubeDefinition } from "./models/tube-definition";
 
-export class Tube {
+export class Tube implements GetDefinition<TubeDefinition> {
   public outerRadius: number;
   public innerRadius: number;
   public height: number;
