@@ -64,7 +64,7 @@ export class Triangle implements GetDefinition<TriangleDefinition> {
       sideLengthC: this.sideLengthC,
       circumference: this.getCircumference(),
       area: this.getArea(),
-      isRightAngle: this.hasRightAngle(),
+      hasRightAngle: this.hasRightAngle(),
       heights: this.getHeights(),
       angles: this.getAngles(),
       outerCircleRadius: this.getOuterCircleRadius(),

@@ -7,7 +7,7 @@ export interface TriangleDefinition {
   sideLengthC: number;
   circumference: number;
   area: number;
-  isRightAngle: boolean;
+  hasRightAngle: boolean;
   heights: TriangleHeights;
   angles: TriangleAngles;
   outerCircleRadius: number;
