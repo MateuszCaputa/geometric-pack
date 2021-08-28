@@ -29,7 +29,7 @@ console.log(firstTriangle.isSimilar(secondTriangle)); // True
 You can also check more examples by running `.getDefinition()` method on other classes or by running example file
 
 ```
-$ node geometric-pack/utils/example
+$ node node_modules/geometric-pack/dist/utils/example
 ```
 
 ## Launch
