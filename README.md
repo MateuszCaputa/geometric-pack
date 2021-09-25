@@ -2,6 +2,8 @@
 
 Geometric calculator created with TypeScript
 
+The package supports accuracy up to 12 decimal places.
+
 ## Table of contents
 
 - [General info](#general-info)

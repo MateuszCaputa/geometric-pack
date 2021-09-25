@@ -1,8 +1,10 @@
 import { transformRadiansToDegrees } from "../../utils/transform";
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { PolygonDefinition } from "./models/polygon-definition";
 import { PolygonAngles } from "./models/polygon-angles";
 
+@NormalizeResults()
 export class Polygon implements GetDefinition<PolygonDefinition> {
   public sideLength: number;
   public vertexCount: number;

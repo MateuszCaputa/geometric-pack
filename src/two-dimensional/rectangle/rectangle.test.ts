@@ -29,7 +29,7 @@ describe("Rectangle", () => {
 
   test("should get diagonal", () => {
     const result = firstRectangle.getDiagonal();
-    const expected = 5.385164807134504;
+    const expected = 5.385164807135;
     expect(result).toBe(expected);
   });
 });

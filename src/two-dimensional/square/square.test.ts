@@ -23,13 +23,13 @@ describe("Square", () => {
 
   test("should get diagonal", () => {
     const result = firstSquare.getDiagonal();
-    const expected = 7.0710678118654755;
+    const expected = 7.071067811865;
     expect(result).toBe(expected);
   });
 
   test("should get outer circle radius", () => {
     const result = firstSquare.getOuterCircleRadius();
-    const expected = 3.5355339059327378;
+    const expected = 3.535533905933;
     expect(result).toBe(expected);
   });
 

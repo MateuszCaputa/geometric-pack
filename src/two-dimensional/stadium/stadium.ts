@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { StadiumDefinition } from "./models/stadium-definition";
 
+@NormalizeResults()
 export class Stadium implements GetDefinition<StadiumDefinition> {
   public sideLength: number;
   public radius: number;

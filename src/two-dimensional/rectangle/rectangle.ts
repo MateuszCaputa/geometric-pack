@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { RectangleDefinition } from "./models/rectangle-definition";
 
+@NormalizeResults()
 export class Rectangle implements GetDefinition<RectangleDefinition> {
   public sideLengthA: number;
   public sideLengthB: number;

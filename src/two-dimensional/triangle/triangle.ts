@@ -1,9 +1,11 @@
 import { transformRadiansToDegrees } from "../../utils/transform";
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { TriangleDefinition } from "./models/triangle-definition";
 import { TriangleAngles } from "./models/triangle-angles";
 import { TriangleHeights } from "./models/triangle-heights";
 
+@NormalizeResults()
 export class Triangle implements GetDefinition<TriangleDefinition> {
   public sideLengthA: number;
   public sideLengthB: number;
@@ -26,7 +28,7 @@ export class Triangle implements GetDefinition<TriangleDefinition> {
     if (args.length !== 3) {
       throw new Error("Triangle constructor takes 3 arguments");
     }
-    if (this.hasNegative(args)) {
+    if (this.hasNonPositive(args)) {
       throw new Error("Side lengths must be positive numbers");
     }
     if (Triangle.isTriangle(args)) {
@@ -34,7 +36,7 @@ export class Triangle implements GetDefinition<TriangleDefinition> {
     }
   }
 
-  private hasNegative([
+  private hasNonPositive([
     sideLengthA,
     sideLengthB,
     sideLengthC,

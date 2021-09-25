@@ -17,13 +17,13 @@ describe("Stadium", () => {
 
   test("should get circumference", () => {
     const result = firstStadium.getCircumference();
-    const expected = 20.566370614359172;
+    const expected = 20.566370614359;
     expect(result).toBe(expected);
   });
 
   test("should get area", () => {
     const result = firstStadium.getArea();
-    const expected = 28.566370614359172;
+    const expected = 28.566370614359;
     expect(result).toBe(expected);
   });
 });

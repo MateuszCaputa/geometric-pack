@@ -23,7 +23,7 @@ describe("Polygon", () => {
 
   test("should get area", () => {
     const result = firstPolygon.getArea();
-    const expected = 15.484296605300706;
+    const expected = 15.484296605301;
     expect(result).toBe(expected);
   });
 
@@ -41,13 +41,13 @@ describe("Polygon", () => {
 
   test("should get outer circle radius", () => {
     const result = firstPolygon.getOuterCircleRadius();
-    const expected = 2.5519524250561196;
+    const expected = 2.551952425056;
     expect(result).toBe(expected);
   });
 
   test("should get inner circle radius", () => {
     const result = firstPolygon.getInnerCircleRadius();
-    const expected = 2.064572880706761;
+    const expected = 2.064572880707;
     expect(result).toBe(expected);
   });
 });
