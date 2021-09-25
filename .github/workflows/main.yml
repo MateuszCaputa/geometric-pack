@@ -1,27 +1,15 @@
-name: "build-test-lint"
+name: "prepublish"
 on:
   pull_request:
   push:
 
 jobs:
-  setup:
+  prepublish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
       - run: npm ci
-  build:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - run: npm run build
-  test:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - run: npm run test:coverage
-  lint:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - run: npm run lint
