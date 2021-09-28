@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { HemisphereDefinition } from "./models/hemisphere-definition";
 
+@NormalizeResults()
 export class Hemisphere implements GetDefinition<HemisphereDefinition> {
   public radius: number;
 

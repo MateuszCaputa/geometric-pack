@@ -17,31 +17,31 @@ describe("Annulus", () => {
 
   test("should get outer circumference", () => {
     const result = firstAnnulus.getOuterCircumference();
-    const expected = 18.84955592153876;
+    const expected = 18.849555921539;
     expect(result).toBe(expected);
   });
 
   test("should get inner circumference", () => {
     const result = firstAnnulus.getInnerCircumference();
-    const expected = 6.283185307179586;
+    const expected = 6.28318530718;
     expect(result).toBe(expected);
   });
 
   test("should get outer circle area", () => {
     const result = firstAnnulus.getOuterCircleArea();
-    const expected = 28.274333882308138;
+    const expected = 28.274333882308;
     expect(result).toBe(expected);
   });
 
   test("should get inner circle area", () => {
     const result = firstAnnulus.getInnerCircleArea();
-    const expected = 3.141592653589793;
+    const expected = 3.14159265359;
     expect(result).toBe(expected);
   });
 
   test("should get annulus area", () => {
     const result = firstAnnulus.getAnnulusArea();
-    const expected = 25.132741228718345;
+    const expected = 25.132741228718;
     expect(result).toBe(expected);
   });
 });

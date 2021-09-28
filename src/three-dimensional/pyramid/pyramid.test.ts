@@ -23,13 +23,13 @@ describe("Pyramid", () => {
 
   test("should get slant height", () => {
     const result = firstPyramid.getSlantHeight();
-    const expected = 8.139410298049853;
+    const expected = 8.13941029805;
     expect(result).toBe(expected);
   });
 
   test("should get lateral surface area", () => {
     const result = firstPyramid.getLateralSurfaceArea();
-    const expected = 48.83646178829912;
+    const expected = 48.836461788299;
     expect(result).toBe(expected);
   });
 
@@ -41,7 +41,7 @@ describe("Pyramid", () => {
 
   test("should get total surface area", () => {
     const result = firstPyramid.getTotalSurfaceArea();
-    const expected = 57.83646178829912;
+    const expected = 57.836461788299;
     expect(result).toBe(expected);
   });
 });

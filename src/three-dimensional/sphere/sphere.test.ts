@@ -17,19 +17,19 @@ describe("Sphere", () => {
 
   test("should get volume", () => {
     const result = firstSphere.getVolume();
-    const expected = 904.7786842338603;
+    const expected = 904.77868423386;
     expect(result).toBe(expected);
   });
 
   test("should get circumference", () => {
     const result = firstSphere.getCircumference();
-    const expected = 37.69911184307752;
+    const expected = 37.699111843078;
     expect(result).toBe(expected);
   });
 
   test("should get area", () => {
     const result = firstSphere.getArea();
-    const expected = 452.3893421169302;
+    const expected = 452.38934211693;
     expect(result).toBe(expected);
   });
 });

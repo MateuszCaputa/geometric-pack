@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { CircleDefinition } from "./models/circle-definition";
 
+@NormalizeResults()
 export class Circle implements GetDefinition<CircleDefinition> {
   public radius: number;
 

@@ -1,7 +1,7 @@
 {
   "name": "geometric-pack",
   "description": "Geometric pack with lots of available calculations for 2D and 3D geometry",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/MateuszCaputa/geometric-pack.git"

@@ -17,13 +17,13 @@ describe("Circle", () => {
 
   test("should get circumference", () => {
     const result = firstCircle.getCircumference();
-    const expected = 43.982297150257104;
+    const expected = 43.982297150257;
     expect(result).toBe(expected);
   });
 
   test("should get area", () => {
     const result = firstCircle.getArea();
-    const expected = 153.93804002589985;
+    const expected = 153.9380400259;
     expect(result).toBe(expected);
   });
 });

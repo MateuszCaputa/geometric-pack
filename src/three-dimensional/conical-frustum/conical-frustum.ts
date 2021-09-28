@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { ConicalFrustumDefinition } from "./models/conical-frustum-definition";
 
+@NormalizeResults()
 export class ConicalFrustum implements GetDefinition<ConicalFrustumDefinition> {
   public radius1: number;
   public radius2: number;

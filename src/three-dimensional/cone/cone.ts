@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { ConeDefinition } from "./models/cone-definition";
 
+@NormalizeResults()
 export class Cone implements GetDefinition<ConeDefinition> {
   public radius: number;
   public height: number;

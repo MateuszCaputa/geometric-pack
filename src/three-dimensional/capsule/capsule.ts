@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { CapsuleDefinition } from "./models/capsule-definition";
 
+@NormalizeResults()
 export class Capsule implements GetDefinition<CapsuleDefinition> {
   public sideLength: number;
   public radius: number;

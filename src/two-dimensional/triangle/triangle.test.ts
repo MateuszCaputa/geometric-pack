@@ -19,8 +19,6 @@ describe("Triangle", () => {
       const error = new Error("Side lengths must be positive numbers");
       expect(result).toThrow(error);
     });
-
-    // TODO: Add tests for each variant on every possible error in validate input in each class
   });
 
   describe("with decimal sides", () => {

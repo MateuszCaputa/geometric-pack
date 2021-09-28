@@ -17,19 +17,19 @@ describe("Capsule", () => {
 
   test("should get volume", () => {
     const result = firstCapsule.getVolume();
-    const expected = 519.4099853935124;
+    const expected = 519.409985393512;
     expect(result).toBe(expected);
   });
 
   test("should get area", () => {
     const result = firstCapsule.getArea();
-    const expected = 326.7256359733385;
+    const expected = 326.725635973339;
     expect(result).toBe(expected);
   });
 
   test("should get circumference", () => {
     const result = firstCapsule.getCircumference();
-    const expected = 25.132741228718345;
+    const expected = 25.132741228718;
     expect(result).toBe(expected);
   });
 });

@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { CylinderDefinition } from "./models/cylinder-definition";
 
+@NormalizeResults()
 export class Cylinder implements GetDefinition<CylinderDefinition> {
   public radius: number;
   public height: number;

@@ -2,7 +2,6 @@ import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { SquareDefinition } from "./models/square-definition";
 
-// TODO: add in each class file @NormalizeResults()
 @NormalizeResults()
 export class Square implements GetDefinition<SquareDefinition> {
   public sideLength: number;

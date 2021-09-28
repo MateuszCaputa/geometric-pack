@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { SphereDefinition } from "./models/sphere-definition";
 
+@NormalizeResults()
 export class Sphere implements GetDefinition<SphereDefinition> {
   public radius: number;
 

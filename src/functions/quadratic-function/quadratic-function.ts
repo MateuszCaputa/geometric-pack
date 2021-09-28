@@ -1,9 +1,11 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { QuadraticDefinition } from "./models/quadratic-definition";
 import { QuadraticInequalitySolution } from "./models/quadratic-inequality-solution";
 import { QuadraticMonotonicity } from "./models/quadratic-monotonicity";
 import { QuadraticVertex } from "./models/quadratic-vertex";
 
+@NormalizeResults()
 export class QuadraticFunction implements GetDefinition<QuadraticDefinition> {
   public a: number;
   public b: number;

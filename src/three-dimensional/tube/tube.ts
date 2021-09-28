@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { TubeDefinition } from "./models/tube-definition";
 
+@NormalizeResults()
 export class Tube implements GetDefinition<TubeDefinition> {
   public outerRadius: number;
   public innerRadius: number;

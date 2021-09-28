@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { CubeDefinition } from "./models/cube-definition";
 
+@NormalizeResults()
 export class Cube implements GetDefinition<CubeDefinition> {
   public sideLength: number;
 

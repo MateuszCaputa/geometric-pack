@@ -17,31 +17,31 @@ describe("Cone", () => {
 
   test("should get slant height", () => {
     const result = firstCone.getSlantHeight();
-    const expected = 7.615773105863909;
+    const expected = 7.615773105864;
     expect(result).toBe(expected);
   });
 
   test("should get volume", () => {
     const result = firstCone.getVolume();
-    const expected = 65.97344572538566;
+    const expected = 65.973445725386;
     expect(result).toBe(expected);
   });
 
   test("should get lateral surface area", () => {
     const result = firstCone.getLateralSurfaceArea();
-    const expected = 71.77697052236633;
+    const expected = 71.776970522367;
     expect(result).toBe(expected);
   });
 
   test("should get base surface area", () => {
     const result = firstCone.getBaseSurfaceArea();
-    const expected = 28.274333882308138;
+    const expected = 28.274333882308;
     expect(result).toBe(expected);
   });
 
   test("should get total surface area", () => {
     const result = firstCone.getTotalSurfaceArea();
-    const expected = 100.05130440467447;
+    const expected = 100.051304404675;
     expect(result).toBe(expected);
   });
 });

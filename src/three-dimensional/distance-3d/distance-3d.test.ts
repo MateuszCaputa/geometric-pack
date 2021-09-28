@@ -41,7 +41,7 @@ describe("Distance3d", () => {
 
   test("should get distance between two spots", () => {
     const result = firstDistance3d.getDistance();
-    const expected = 10.246950765959598;
+    const expected = 10.24695076596;
     expect(result).toBe(expected);
   });
 });

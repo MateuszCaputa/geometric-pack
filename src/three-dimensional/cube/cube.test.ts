@@ -29,13 +29,13 @@ describe("Cube", () => {
 
   test("should get face diagonal", () => {
     const result = firstCube.getFaceDiagonal();
-    const expected = 7.0710678118654755;
+    const expected = 7.071067811865;
     expect(result).toBe(expected);
   });
 
   test("should get solid diagonal", () => {
     const result = firstCube.getSolidDiagonal();
-    const expected = 8.660254037844386;
+    const expected = 8.660254037844;
     expect(result).toBe(expected);
   });
 });

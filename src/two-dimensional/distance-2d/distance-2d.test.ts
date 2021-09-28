@@ -29,7 +29,7 @@ describe("Distance2d", () => {
 
   test("should get distance between both spots", () => {
     const result = firstDistance2d.getDistance();
-    const expected = 26.196373794859472;
+    const expected = 26.196373794859;
     expect(result).toBe(expected);
   });
 });

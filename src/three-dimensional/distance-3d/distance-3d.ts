@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { Distance3dDefinition } from "./models/distance-3d-definition";
 
+@NormalizeResults()
 export class Distance3d implements GetDefinition<Distance3dDefinition> {
   public x1: number;
   public y1: number;

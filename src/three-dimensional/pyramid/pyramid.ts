@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { PyramidDefinition } from "./models/pyramid-definition";
 
+@NormalizeResults()
 export class Pyramid implements GetDefinition<PyramidDefinition> {
   public sideLength: number;
   public height: number;

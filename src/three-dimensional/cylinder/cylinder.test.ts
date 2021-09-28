@@ -17,25 +17,25 @@ describe("Cylinder", () => {
 
   test("should get volume", () => {
     const result = firstCylinder.getVolume();
-    const expected = 301.59289474462014;
+    const expected = 301.59289474462;
     expect(result).toBe(expected);
   });
 
   test("should get lateral surface area", () => {
     const result = firstCylinder.getLateralSurfaceArea();
-    const expected = 150.79644737231007;
+    const expected = 150.79644737231;
     expect(result).toBe(expected);
   });
 
   test("should get base surface area", () => {
     const result = firstCylinder.getBaseSurfaceArea();
-    const expected = 50.26548245743669;
+    const expected = 50.265482457437;
     expect(result).toBe(expected);
   });
 
   test("should get total surface area", () => {
     const result = firstCylinder.getTotalSurfaceArea();
-    const expected = 251.32741228718345;
+    const expected = 251.327412287184;
     expect(result).toBe(expected);
   });
 });

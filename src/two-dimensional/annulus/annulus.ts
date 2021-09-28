@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { AnnulusDefinition } from "./models/annulus-definition";
 
+@NormalizeResults()
 export class Annulus implements GetDefinition<AnnulusDefinition> {
   public outerRadius: number;
   public innerRadius: number;

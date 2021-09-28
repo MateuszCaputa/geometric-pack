@@ -23,7 +23,7 @@ describe("Cuboid", () => {
 
   test("should get diagonal", () => {
     const result = firstCuboid.getDiagonal();
-    const expected = 6.164414002968976;
+    const expected = 6.164414002969;
     expect(result).toBe(expected);
   });
 

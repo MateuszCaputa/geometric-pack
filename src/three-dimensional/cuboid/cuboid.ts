@@ -1,6 +1,8 @@
+import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { CuboidDefinition } from "./models/cuboid-definition";
 
+@NormalizeResults()
 export class Cuboid implements GetDefinition<CuboidDefinition> {
   public length: number;
   public width: number;
