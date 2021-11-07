@@ -1,18 +1,17 @@
-const decimalDigitsPrecision = 12;
+import { Angle } from "./angle/angle";
+import { normalizeDecimal } from "./decimal-normalization";
 
-export const NormalizeMethodResult: MethodDecorator = (
+const NormalizeMethodResult: MethodDecorator = (
   target,
   key,
   descriptor: PropertyDescriptor
 ): void => {
   const originalMethod = descriptor.value;
-  descriptor.value = function (...args: unknown[]) {
+  descriptor.value = function (...args: unknown[]): number | Angle {
     const originalResult = originalMethod.apply(this, args);
+
     if (typeof originalResult === "number") {
-      const integerDigitsCount = Math.floor(originalResult).toString().length;
-      return parseFloat(
-        originalResult.toPrecision(decimalDigitsPrecision + integerDigitsCount)
-      );
+      return normalizeDecimal(originalResult);
     }
 
     return originalResult;
