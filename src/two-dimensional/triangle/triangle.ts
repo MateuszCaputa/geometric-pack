@@ -1,8 +1,8 @@
-import { transformRadiansToDegrees } from "../../utils/transform";
 import { NormalizeResults } from "../../utils/normalize-result";
+import { Angle } from "../../utils/angle/angle";
+import { isEqual } from "../../utils/is-equal";
 import { GetDefinition } from "../../models/get-definition";
 import { TriangleDefinition } from "./models/triangle-definition";
-import { TriangleAngles } from "./models/triangle-angles";
 import { TriangleHeights } from "./models/triangle-heights";
 
 @NormalizeResults()
@@ -68,7 +68,9 @@ export class Triangle implements GetDefinition<TriangleDefinition> {
       area: this.getArea(),
       hasRightAngle: this.hasRightAngle(),
       heights: this.getHeights(),
-      angles: this.getAngles(),
+      alpha: this.getAlpha(),
+      beta: this.getBeta(),
+      gamma: this.getGamma(),
       outerCircleRadius: this.getOuterCircleRadius(),
       innerCircleRadius: this.getInnerCircleRadius(),
     };
@@ -115,30 +117,25 @@ export class Triangle implements GetDefinition<TriangleDefinition> {
     };
   }
 
-  getAlpha(): number {
+  getAlpha(): Angle {
     const radians = Math.asin(
       (2 * this.getArea()) / (this.sideLengthB * this.sideLengthC)
     );
-    return transformRadiansToDegrees(radians);
+    return new Angle(radians);
   }
 
-  getBeta(): number {
+  getBeta(): Angle {
     const radians = Math.asin(
       (2 * this.getArea()) / (this.sideLengthA * this.sideLengthC)
     );
-    return transformRadiansToDegrees(radians);
+    return new Angle(radians);
   }
 
-  getGamma(): number {
-    return 180 - (this.getAlpha() + this.getBeta());
-  }
-
-  getAngles(): TriangleAngles {
-    return {
-      alpha: this.getAlpha(),
-      beta: this.getBeta(),
-      gamma: this.getGamma(),
-    };
+  getGamma(): Angle {
+    const radians = Math.asin(
+      (2 * this.getArea()) / (this.sideLengthA * this.sideLengthB)
+    );
+    return new Angle(radians);
   }
 
   isCongruent(triangle: Triangle): boolean {
@@ -151,9 +148,18 @@ export class Triangle implements GetDefinition<TriangleDefinition> {
 
   isSimilar(triangle: Triangle): boolean {
     return (
-      this.getGamma() === triangle.getGamma() &&
-      this.getBeta() === triangle.getBeta() &&
-      this.getAlpha() === triangle.getAlpha()
+      isEqual(
+        this.getGamma().originalDegrees,
+        triangle.getGamma().originalDegrees
+      ) &&
+      isEqual(
+        this.getBeta().originalDegrees,
+        triangle.getBeta().originalDegrees
+      ) &&
+      isEqual(
+        this.getAlpha().originalDegrees,
+        triangle.getAlpha().originalDegrees
+      )
     );
   }
 

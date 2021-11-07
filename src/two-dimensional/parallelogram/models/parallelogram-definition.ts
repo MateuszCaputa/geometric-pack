@@ -1,12 +1,13 @@
-import { ParallelogramAngles } from "./parallelogram-angles";
-import { ParallelogramDiagonals } from "./parallelogram-diagonals";
+import { Angle } from "../../../utils/angle/angle";
 
 export interface ParallelogramDefinition {
-  sideLengthA: number;
-  sideLengthB: number;
+  sideA: number;
+  sideB: number;
   height: number;
   circumference: number;
   area: number;
-  cornerAngles: ParallelogramAngles;
-  diagonals: ParallelogramDiagonals;
+  alpha: Angle;
+  beta: Angle;
+  shorterDiagonal: number;
+  longerDiagonal: number;
 }

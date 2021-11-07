@@ -54,7 +54,7 @@
     "test:watch": "jest ./src --watch",
     "test:coverage": "jest ./src --coverage",
     "lint": "eslint ./src",
-    "prepublish": "npm run build && npm test && npm run lint"
+    "prepublish": "npm run build && npm run test:coverage && npm run lint"
   },
   "files": [
     "dist/**/*.js",

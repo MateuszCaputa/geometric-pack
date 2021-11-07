@@ -36,13 +36,13 @@ describe("Parallelogram", () => {
   test("should get alpha angle", () => {
     const result = firstParallelogram.getAlpha();
     const expected = 53.130102354156;
-    expect(result).toBe(expected);
+    expect(result.degrees).toBe(expected);
   });
 
   test("should get beta angle", () => {
     const result = firstParallelogram.getBeta();
     const expected = 126.869897645844;
-    expect(result).toBe(expected);
+    expect(result.degrees).toBe(expected);
   });
 
   test("should get longer diagonal", () => {

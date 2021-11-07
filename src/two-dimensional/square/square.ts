@@ -6,6 +6,7 @@ import { SquareDefinition } from "./models/square-definition";
 export class Square implements GetDefinition<SquareDefinition> {
   public sideLength: number;
 
+  // TODO: allow to create either from side or diagonal
   constructor(...args: number[]) {
     this.validateInput(args);
     this.sideLength = args[0];

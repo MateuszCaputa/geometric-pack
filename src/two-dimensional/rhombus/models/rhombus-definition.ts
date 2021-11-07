@@ -1,11 +1,12 @@
-import { RhombusAngles } from "./rhombus-angles";
-import { RhombusDiagonals } from "./rhombus-diagonals";
+import { Angle } from "../../../utils/angle/angle";
 
 export interface RhombusDefinition {
-  sideLength: number;
+  side: number;
   height: number;
+  shorterDiagonal: number;
+  longerDiagonal: number;
+  alpha: Angle;
+  beta: Angle;
   circumference: number;
   area: number;
-  cornerAngles: RhombusAngles;
-  diagonals: RhombusDiagonals;
 }

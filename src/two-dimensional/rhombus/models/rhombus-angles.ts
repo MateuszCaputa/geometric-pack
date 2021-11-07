@@ -1,4 +1,6 @@
+import { Angle } from "../../../utils/angle/angle";
+
 export interface RhombusAngles {
-  alpha: number;
-  beta: number;
+  alpha: Angle;
+  beta: Angle;
 }

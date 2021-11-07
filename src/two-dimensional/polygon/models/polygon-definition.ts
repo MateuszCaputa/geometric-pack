@@ -1,11 +1,12 @@
-import { PolygonAngles } from "./polygon-angles";
+import { Angle } from "../../../utils/angle/angle";
 
 export interface PolygonDefinition {
   sideLength: number;
   vertexCount: number;
   circumference: number;
   area: number;
-  angels: PolygonAngles;
+  interiorAngle: Angle;
+  exteriorAngle: Angle;
   outerCircleRadius: number;
   innerCircleRadius: number;
 }

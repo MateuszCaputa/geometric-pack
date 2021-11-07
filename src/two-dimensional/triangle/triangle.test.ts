@@ -5,13 +5,6 @@ const secondTriangle = new Triangle(10, 6, 8);
 
 describe("Triangle", () => {
   describe("with incorrect input", () => {
-    test("Test description", () => {
-      const t = () => {
-        throw new TypeError();
-      };
-      expect(t).toThrow(TypeError);
-    });
-
     test("should fail due to non-positive numbers", () => {
       const result = () => {
         new Triangle(1, 0, 2);
@@ -87,19 +80,19 @@ describe("Triangle", () => {
     test("should get gamma angle", () => {
       const result = firstTriangle.getGamma();
       const expected = 90;
-      expect(result).toBe(expected);
+      expect(result.degrees).toBe(expected);
     });
 
     test("should get beta angle", () => {
       const result = firstTriangle.getBeta();
       const expected = 53.130102354156;
-      expect(result).toBe(expected);
+      expect(result.degrees).toBe(expected);
     });
 
     test("should get alpha angle", () => {
       const result = firstTriangle.getAlpha();
       const expected = 36.869897645844;
-      expect(result).toBe(expected);
+      expect(result.degrees).toBe(expected);
     });
 
     test("should get outer circle radius", () => {

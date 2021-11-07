@@ -30,13 +30,13 @@ describe("Polygon", () => {
   test("should get interior angle", () => {
     const result = firstPolygon.getInteriorAngle();
     const expected = 108;
-    expect(result).toBe(expected);
+    expect(result.degrees).toBe(expected);
   });
 
   test("should get exterior angle", () => {
     const result = firstPolygon.getExteriorAngle();
     const expected = 72;
-    expect(result).toBe(expected);
+    expect(result.degrees).toBe(expected);
   });
 
   test("should get outer circle radius", () => {

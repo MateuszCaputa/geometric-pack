@@ -1,4 +1,4 @@
-import { TriangleAngles } from "./triangle-angles";
+import { Angle } from "../../../utils/angle/angle";
 import { TriangleHeights } from "./triangle-heights";
 
 export interface TriangleDefinition {
@@ -9,7 +9,9 @@ export interface TriangleDefinition {
   area: number;
   hasRightAngle: boolean;
   heights: TriangleHeights;
-  angles: TriangleAngles;
+  alpha: Angle;
+  beta: Angle;
+  gamma: Angle;
   outerCircleRadius: number;
   innerCircleRadius: number;
 }

@@ -1,8 +1,7 @@
-import { transformRadiansToDegrees } from "../../utils/transform";
 import { NormalizeResults } from "../../utils/normalize-result";
+import { Angle } from "../../utils/angle/angle";
 import { GetDefinition } from "../../models/get-definition";
 import { PolygonDefinition } from "./models/polygon-definition";
-import { PolygonAngles } from "./models/polygon-angles";
 
 @NormalizeResults()
 export class Polygon implements GetDefinition<PolygonDefinition> {
@@ -46,7 +45,8 @@ export class Polygon implements GetDefinition<PolygonDefinition> {
       vertexCount: this.vertexCount,
       circumference: this.getCircumference(),
       area: this.getArea(),
-      angels: this.getAngles(),
+      interiorAngle: this.getInteriorAngle(),
+      exteriorAngle: this.getExteriorAngle(),
       outerCircleRadius: this.getOuterCircleRadius(),
       innerCircleRadius: this.getInnerCircleRadius(),
     };
@@ -65,21 +65,14 @@ export class Polygon implements GetDefinition<PolygonDefinition> {
     );
   }
 
-  getInteriorAngle(): number {
+  getInteriorAngle(): Angle {
     const radians = ((this.vertexCount - 2) * Math.PI) / this.vertexCount;
-    return transformRadiansToDegrees(radians);
+    return new Angle(radians);
   }
 
-  getExteriorAngle(): number {
+  getExteriorAngle(): Angle {
     const radians = (2 * Math.PI) / this.vertexCount;
-    return transformRadiansToDegrees(radians);
-  }
-
-  getAngles(): PolygonAngles {
-    return {
-      interiorAngle: this.getInteriorAngle(),
-      exteriorAngle: this.getExteriorAngle(),
-    };
+    return new Angle(radians);
   }
 
   getOuterCircleRadius(): number {

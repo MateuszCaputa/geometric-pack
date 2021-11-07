@@ -1,9 +1,7 @@
-import { transformRadiansToDegrees } from "../../utils/transform";
 import { NormalizeResults } from "../../utils/normalize-result";
 import { GetDefinition } from "../../models/get-definition";
 import { ParallelogramDefinition } from "./models/parallelogram-definition";
-import { ParallelogramAngles } from "./models/parallelogram-angles";
-import { ParallelogramDiagonals } from "./models/parallelogram-diagonals";
+import { Angle } from "../../utils/angle/angle";
 
 @NormalizeResults()
 export class Parallelogram implements GetDefinition<ParallelogramDefinition> {
@@ -38,13 +36,15 @@ export class Parallelogram implements GetDefinition<ParallelogramDefinition> {
 
   getDefinition(): ParallelogramDefinition {
     return {
-      sideLengthA: this.sideLengthA,
-      sideLengthB: this.sideLengthB,
+      sideA: this.sideLengthA,
+      sideB: this.sideLengthB,
       height: this.height,
+      alpha: this.getAlpha(),
+      beta: this.getBeta(),
+      shorterDiagonal: this.getShorterDiagonal(),
+      longerDiagonal: this.getLongerDiagonal(),
       circumference: this.getCircumference(),
       area: this.getArea(),
-      cornerAngles: this.getAngles(),
-      diagonals: this.getDiagonals(),
     };
   }
 
@@ -56,20 +56,13 @@ export class Parallelogram implements GetDefinition<ParallelogramDefinition> {
     return this.sideLengthB * this.height;
   }
 
-  getAlpha(): number {
+  getAlpha(): Angle {
     const radians = Math.asin(this.height / this.sideLengthA);
-    return transformRadiansToDegrees(radians);
+    return new Angle(radians);
   }
 
-  getBeta(): number {
-    return 180 - this.getAlpha();
-  }
-
-  getAngles(): ParallelogramAngles {
-    return {
-      alpha: this.getAlpha(),
-      beta: this.getBeta(),
-    };
+  getBeta(): Angle {
+    return new Angle(Math.PI - this.getAlpha().originalRadians);
   }
 
   getLongerDiagonal(): number {
@@ -79,7 +72,7 @@ export class Parallelogram implements GetDefinition<ParallelogramDefinition> {
         2 *
           this.sideLengthA *
           this.sideLengthB *
-          Math.cos((this.getAlpha() * Math.PI) / 180)
+          Math.cos(this.getAlpha().originalRadians)
     );
   }
 
@@ -90,14 +83,7 @@ export class Parallelogram implements GetDefinition<ParallelogramDefinition> {
         2 *
           this.sideLengthA *
           this.sideLengthB *
-          Math.cos((this.getAlpha() * Math.PI) / 180)
+          Math.cos(this.getAlpha().originalRadians)
     );
-  }
-
-  getDiagonals(): ParallelogramDiagonals {
-    return {
-      longerDiagonal: this.getLongerDiagonal(),
-      shorterDiagonal: this.getShorterDiagonal(),
-    };
   }
 }
