@@ -1,6 +1,23 @@
 import { Angle } from "./angle/angle";
 import { normalizeDecimal } from "./decimal-normalization";
 
+const NormalizeAttribute: MethodDecorator = (
+  target,
+  key,
+  descriptor: PropertyDescriptor
+): void => {
+  const originalMethod = descriptor.get!;
+  descriptor.get = function (): number | Angle {
+    const originalResult = originalMethod.apply(this);
+
+    if (typeof originalResult === "number") {
+      return normalizeDecimal(originalResult);
+    }
+
+    return originalResult;
+  };
+};
+
 const NormalizeMethodResult: MethodDecorator = (
   target,
   key,
@@ -24,9 +41,17 @@ export const NormalizeResults = (): ClassDecorator => {
     for (const [propName, descriptor] of Object.entries(descriptors)) {
       const isMethod =
         typeof descriptor.value == "function" && propName != "constructor";
-      if (!isMethod) continue;
-      NormalizeMethodResult(target, propName, descriptor);
-      Object.defineProperty(target.prototype, propName, descriptor);
+      const isGetter = typeof descriptor.get === "function";
+
+      if (isMethod) {
+        NormalizeMethodResult(target, propName, descriptor);
+        Object.defineProperty(target.prototype, propName, descriptor);
+      }
+
+      if (isGetter) {
+        NormalizeAttribute(target, propName, descriptor);
+        Object.defineProperty(target.prototype, propName, descriptor);
+      }
     }
   };
 };
