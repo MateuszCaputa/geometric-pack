@@ -14,19 +14,19 @@ describe("RhombusFromDiagonals", () => {
 
     test("should get side", () => {
       const result = integerRhombus.side;
-      const expected = 6.020797289396148;
+      const expected = 6.020797289396;
       expect(result).toBe(expected);
     });
 
     test("should get height", () => {
       const result = integerRhombus.height;
-      const expected = 5.979274549468959;
+      const expected = 5.97927454947;
       expect(result).toBe(expected);
     });
 
     test("should get circumference", () => {
       const result = integerRhombus.circumference;
-      const expected = 24.08318915758459;
+      const expected = 24.083189157584;
       expect(result).toBe(expected);
     });
 
@@ -38,13 +38,13 @@ describe("RhombusFromDiagonals", () => {
 
     test("should get alpha angle", () => {
       const result = integerRhombus.alpha;
-      const expected = 83.26707867314;
+      const expected = 83.267078673164;
       expect(result.degrees).toBe(expected);
     });
 
     test("should get beta angle", () => {
       const result = integerRhombus.beta;
-      const expected = 96.732921326885;
+      const expected = 96.732921326828;
       expect(result.degrees).toBe(expected);
     });
 
@@ -63,23 +63,23 @@ describe("RhombusFromDiagonals", () => {
     test("should get definition", () => {
       const result = integerRhombus.getDefinition();
       const expected = {
-        side: 6.020797289396148,
-        height: 5.979274549468959,
+        side: 6.020797289396,
+        height: 5.97927454947,
         shorterDiagonal: 8,
         longerDiagonal: 9,
         alpha: {
-          originalRadians: 1.453284681363451,
-          radians: 1.453284681363,
-          originalDegrees: 83.26707867314039,
-          degrees: 83.26707867314,
+          originalRadians: 1.4532846813638678,
+          radians: 1.453284681364,
+          originalDegrees: 83.26707867316426,
+          degrees: 83.267078673164,
         },
         beta: {
-          originalRadians: 1.688307972226793,
-          radians: 1.688307972227,
-          originalDegrees: 96.73292132688546,
-          degrees: 96.732921326885,
+          originalRadians: 1.6883079722257932,
+          radians: 1.688307972226,
+          originalDegrees: 96.73292132682818,
+          degrees: 96.732921326828,
         },
-        circumference: 24.08318915758459,
+        circumference: 24.083189157584,
         area: 36,
       };
       expect(result).toEqual(expected);
@@ -91,19 +91,19 @@ describe("RhombusFromDiagonals", () => {
 
     test("should get side", () => {
       const result = decimalRhombus.side;
-      const expected = 0.6020797289396148;
+      const expected = 0.60207972894;
       expect(result).toBe(expected);
     });
 
     test("should get height", () => {
       const result = decimalRhombus.height;
-      const expected = 0.597927454946896;
+      const expected = 0.597927454947;
       expect(result).toBe(expected);
     });
 
     test("should get circumference", () => {
       const result = decimalRhombus.circumference;
-      const expected = 2.4083189157584592;
+      const expected = 2.40831891576;
       expect(result).toBe(expected);
     });
 
@@ -115,13 +115,13 @@ describe("RhombusFromDiagonals", () => {
 
     test("should get alpha angle", () => {
       const result = decimalRhombus.alpha;
-      const expected = 83.26707867314;
+      const expected = 83.267078672519;
       expect(result.degrees).toBe(expected);
     });
 
     test("should get beta angle", () => {
       const result = decimalRhombus.beta;
-      const expected = 96.732921326885;
+      const expected = 96.732921327458;
       expect(result.degrees).toBe(expected);
     });
 

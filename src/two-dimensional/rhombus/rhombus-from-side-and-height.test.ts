@@ -56,13 +56,13 @@ describe("RhombusSideAndHeight", () => {
 
     test("should get longer diagonal", () => {
       const result = integerRhombus.longerDiagonal;
-      const expected = 8.94427190999829;
+      const expected = 8.944271909998;
       expect(result).toBe(expected);
     });
 
     test("should get shorter diagonal", () => {
       const result = integerRhombus.shorterDiagonal;
-      const expected = 4.472135955001313;
+      const expected = 4.472135955001;
       expect(result).toBe(expected);
     });
 
@@ -71,8 +71,8 @@ describe("RhombusSideAndHeight", () => {
       const expected = {
         side: 5,
         height: 4,
-        shorterDiagonal: 4.472135955001313,
-        longerDiagonal: 8.94427190999829,
+        shorterDiagonal: 4.472135955001,
+        longerDiagonal: 8.944271909998,
         alpha: {
           originalRadians: 0.9272952180016123,
           radians: 0.927295218002,
@@ -133,13 +133,13 @@ describe("RhombusSideAndHeight", () => {
 
     test("should get longer diagonal", () => {
       const result = decimalRhombus.longerDiagonal;
-      const expected = 0.8944271909998291;
+      const expected = 0.894427191;
       expect(result).toBe(expected);
     });
 
     test("should get shorter diagonal", () => {
       const result = decimalRhombus.shorterDiagonal;
-      const expected = 0.44721359550013134;
+      const expected = 0.4472135955;
       expect(result).toBe(expected);
     });
   });
